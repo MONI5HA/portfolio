@@ -145,6 +145,6 @@ export const PROJECTS = [
 
 export const CONTACT = {
   address: "Windsor, Ontario, Canada",
-  phoneNo: "+1(382) 880 -0606 ",
+
   email: "monishagovind2000@gmail.com",
 };
