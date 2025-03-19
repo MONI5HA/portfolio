@@ -15,81 +15,122 @@ export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer w
 
 export const experience = [
   {
-    year: "2021 - 2023",
-    role: "Program Analyst/Data Analyst",
-    company: "Cognizant Technology Solution, Chennai, India.",
+    year: "2024 - 2024",
+    role: "Software Developer",
+    company: "Heptre Techworks (Startup), Remote",
     description:
-      "Created visualizations to tell stories and communicate findings to various stakeholders.Executed Sales Analytics projects by generating Machine Learning-driven dashboards and evaluating performance metrics such as sales representative effectiveness, product offering, activity engagement, and pipeline analysis.Architected and maintaining ETL data flows for a massive Salesforce database, including multiple orgs and sandboxes, incorporating features such as data filters, control access, complex field mappings, and data validation.Optimized data flow, enriching efficiency and reducing run time by 50% (30 minutes).Authored complex SAQL-powered lenses to support multiple business unit analysis needs.",
+      "Designed and developed a robust, scalable full-stack web application using Angular, Tailwind CSS, creating a responsive user interface and integrating Firebase for seamless real-time data updates and secure user authentication. Integrated cutting-edge language models (LLMs) into the application, enabling real-time predictive text features and chatbot functionalities to streamline user interaction and support services. Contributed to team success through thoughtful code reviews, documentation, and knowledge sharing. Implemented Scrum methodology to improve transparency and optimize team productivity in software development.",
     technologies: [
+      "Angular JS",
+      "Tailwind CSS",
+      "Firebase",
+      "LLMs",
+      "Git",
+      "Scrum",
+      "Azure DevOps",
+      "Google Cloud Platform",
+    ],
+  },
+  {
+    year: "2021 - 2023",
+    role: "Software Developer",
+    company: "Cognizant Technology Solutions, Chennai, India",
+    description:
+      "Spearheaded the development of a sophisticated database-driven web application for sales performance analytics, integrating Machine Learning models and Tableau CRM to provide actionable insights into sales metrics. Streamlined the integration of Salesforce Analytics into back-end applications, enabling seamless real-time data synchronization and reporting. Automated build and deployment pipelines using Azure DevOps, implementing CI/CD processes with Docker containerization, reducing deployment time by 40%, and ensuring faster, more reliable production releases.",
+    technologies: [
+      "React.js",
       "Salesforce",
-      "Tableau",
-      "Python",
-      "SQL",
-      "ETL",
+      "SAQL",
+      "Tableau CRM",
+      "JavaScript",
+      "ETL Processes",
+      "API Integration",
       "Machine Learning",
-      "Salesforce Analytics Cloud",
-      "Salesforce Einstein Analytics",
+      "Azure DevOps",
+      "Docker",
+    ],
+  },
+  {
+    year: "2020 - 2021",
+    role: "Software DevOps Intern",
+    company: "3Edge Solutions, Chennai, India",
+    description:
+      "Supported the Examination Discount App by managing infrastructure, automating deployment, and ensuring seamless integration of third-party APIs. Gained hands-on experience with Docker and Kubernetes for streamlined application deployment, collaborating with cross-functional teams to optimize release cycles. Enhanced system reliability by setting up Prometheus for real-time monitoring and logging.",
+    technologies: [
+      "Docker",
+      "Kubernetes",
+      "Cloud Technologies",
+      "VMs",
+      "CI/CD",
+      "Prometheus",
+      "API Integration",
     ],
   },
 ];
+
 export const education = [
   {
     year: "2024 - Present",
     role: "Masters in Applied Computing",
-    company: "The University of windsor,Canada.",
+    company: "The University of Windsor, Canada",
     description:
-      "Master of Applied Computing is a professional program that  provided me with a solid foundation of the industry oriented practical aspects of computer science. It provides a solid background in the foundation of computing and business",
+      "The Master of Applied Computing program equips me with cutting-edge knowledge and hands-on experience in both computer science and business applications. It emphasizes the practical, industry-oriented aspects of computing, preparing me to tackle complex problems in software development, cloud computing, AI, cybersecurity, and more. This program blends technical expertise with business insights, fostering the skills needed to innovate and drive digital transformation in diverse industries.",
     technologies: [
-      "Java",
-      "C++",
-      "Python",
-      "Data Structures",
-      "Algorithms",
+      "Internet and Security",
+
       "Database Management Systems",
       "Software Engineering",
       "Web Development",
       "Mobile Development",
       "Cloud Computing",
       "Big Data",
-      "Machine Learning",
-      "Artificial Intelligence",
-      "Cybersecurity",
-      "Human-Computer Interaction",
+
       "Project Management",
       "Business Analysis",
     ],
   },
   {
-    year: "2022 - 2024",
-    role: "Master of Science in Augment Reality and Virtual Reality",
+    year: "2023 - Ongoing",
+    role: "Master of Science in Augmented Reality and Virtual Reality",
     company: "Indian Institute of Technology, Jodhpur, India",
     description:
-      "The M.Sc. in Augmented Reality and Virtual Reality is a two-year postgraduate program that provides me with a comprehensive understanding of the principles and practices of AR and VR technologies. The program covers a wide range of topics, including computer graphics, human-computer interaction, and 3D modeling. I learnt how to design and develop AR and VR applications for a variety of industries, including gaming, entertainment, education, and healthcare.",
-    technologies: ["Mobile AR and VR", "Haptics", "Sensation and Perception"],
+      "This advanced program offers a deep dive into the transformative fields of AR and VR, combining theoretical knowledge with hands-on development of immersive technologies. I gained expertise in computer graphics, 3D modeling, and human-computer interaction, which enables me to create innovative AR/VR applications for industries such as gaming, healthcare, education, and entertainment. My work also focused on how AR and VR can revolutionize user experiences and drive new business opportunities.",
+    technologies: [
+      "Mobile AR and VR",
+      "Haptics",
+      "Sensation and Perception",
+      "Virtual Reality",
+      "Argument Reality",
+      "XR",
+    ],
   },
   {
     year: "2022 - 2024",
     role: "Master of Business Administration in Business Analytics",
     company: "Anna University, Chennai, India",
     description:
-      "The MBA in Business Analytics is a two-year postgraduate program that provides me with a solid foundation in business analytics and data science. The program covers a wide range of topics, including data mining, machine learning, and predictive analytics. I learnt how to use data to drive business decisions and improve organizational performance.",
+      "The MBA in Business Analytics has broadened my understanding of data science and its strategic application in driving business decisions. With a focus on data mining, machine learning, and predictive analytics, this program has empowered me to leverage data to solve real-world business challenges, optimize operational performance, and drive growth. It has also provided me with a solid foundation in business strategy and leadership.",
     technologies: [
       "Python",
       "Big Data Analytics",
       "Human Resource Management",
       "Machine Learning",
+      "Data Analytics",
     ],
   },
   {
     year: "2017 - 2021",
     role: "Bachelor of Engineering in Computer Science & Engineering",
-    company: "Anna University,Chennai, India",
+    company: "Anna University, Chennai, India",
     description:
-      "The Bachelor of Engineering in Computer Science & Engineering is a four-year undergraduate program that provides me with a solid foundation in computer science and engineering. The program covers a wide range of topics, including programming, data structures, algorithms, and computer networks. I learnt how to design and develop software applications, manage IT projects, and solve complex problems using technology.",
+      "The Bachelor of Engineering in Computer Science & Engineering program laid the groundwork for my technical career, focusing on the fundamentals of computer science and software engineering. Through this program, I gained proficiency in programming, algorithms, and systems design, along with hands-on experience in developing software solutions and managing complex IT projects. It honed my problem-solving skills and provided a strong foundation in computer networks and artificial intelligence.",
     technologies: [
       "Data Structure",
-      "Artificial Intelligence ",
+      "Operating system",
       "Software Engineering",
+      "Artificial Intelligence",
+      "Programming Languages",
+      "Database",
     ],
   },
 ];
@@ -144,7 +185,7 @@ export const PROJECTS = [
 ];
 
 export const CONTACT = {
-  address: "Windsor, Ontario, Canada",
+  address: " Ontario, Canada",
 
   email: "monishagovind2000@gmail.com",
 };
