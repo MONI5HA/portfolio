@@ -1,84 +1,99 @@
-import React, { useEffect, useState } from 'react';
-import { ref, onValue } from 'firebase/database';
-import { realtimeDB } from '../firebaseConfig'; // Assuming you have initialized your Firebase instance
+import React, { useEffect, useState } from "react";
+import { ref, onValue } from "firebase/database";
+import { realtimeDB } from "../firebaseConfig";
+import { motion } from "framer-motion";
 
 const Project = () => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    // Reference to the 'projects' field in Firebase
-    const projectsRef = ref(realtimeDB, '/Project');
+    const projectsRef = ref(realtimeDB, "/Project");
 
-    // Listen for changes in Firebase database
     onValue(projectsRef, (snapshot) => {
       if (snapshot.exists()) {
         const data = snapshot.val();
-        const projectArray = [];
-        for (let id in data) {
-          projectArray.push({
-            id,
-            ...data[id],
-          });
-        }
-        setProjects(projectArray); // Update state with fetched project data
+        const projectArray = Object.keys(data).map((id) => ({
+          id,
+          ...data[id],
+        }));
+        setProjects(projectArray);
       } else {
-        console.log('No data available');
+        console.log("No data available");
       }
-    }, (error) => {
-      console.error('Error fetching data:', error);
     });
-
-    // Cleanup Firebase listener on component unmount
-    return () => {
-      // Cleanup if needed
-    };
   }, []);
 
   return (
-    <div className='border-b border-neutral-900 pb-8'>
-      <h1 className="my-20 text-center text-6xl font-bold text-purple-600">Projects</h1>
+    <section id="project" className="border-b border-neutral-900 py-20">
+      <motion.h1
+        className="my-12 text-center text-5xl md:text-6xl font-extrabold text-purple-500"
+        initial={{ opacity: 0, y: -40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+      >
+        Projects
+      </motion.h1>
 
-      <div className='flex flex-wrap justify-center gap-12'>
-        {projects.map((project) => (
-          <div
+      {/* Masonry Layout */}
+      <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 px-6 space-y-6">
+        {projects.map((project, index) => (
+          <motion.div
             key={project.id}
-            className='group mb-12 flex flex-col items-center p-6 bg-neutral-800 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:opacity-90'
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.1 }}
+            className="break-inside-avoid rounded-xl overflow-hidden bg-white/10 backdrop-blur-lg border border-purple-500/30 shadow-md hover:shadow-purple-500/40 transition-transform hover:-translate-y-1"
           >
-            <div className='w-full max-w-xs mb-6'>
-              {/* Check if image or video is available */}
-              {project.Image ? (
-                <img
-                  src={project.Image}
-                  alt={project.title}
-                  className='object-cover transition-all duration-300 group-hover:scale-105'
-                />
-              ): (
-                <div className='bg-gray-300 w-full h-48 rounded-lg flex items-center justify-center'>
-                  <span className='text-gray-700 text-lg'>No Image/Video Available</span>
+            {/* Media */}
+            {project.Image && (
+              <img
+                src={project.Image}
+                alt={project.Title}
+                className="w-full object-cover"
+              />
+            )}
+            {project.Video && (
+              <video src={project.Video} controls className="w-full" />
+            )}
+
+            {/* Content */}
+            <div className="p-4">
+              <h2 className="text-xl font-semibold text-white mb-2">
+                {project.Title}
+              </h2>
+              <p className="text-sm text-neutral-300 mb-3">
+                {project.Description}
+              </p>
+
+              {/* Tech stack */}
+              {project.Tech && (
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.Tech.split(",").map((tech, i) => (
+                    <span
+                      key={i}
+                      className="px-3 py-1 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 text-xs text-white"
+                    >
+                      {tech.trim()}
+                    </span>
+                  ))}
                 </div>
               )}
-            </div>
 
-            <h6 className='text-xl mb-2 font-semibold text-gray-800 group-hover:text-purple-600'>
-              {project.Title}
-            </h6>
-            <p className='text-lg mb-4 text-neutral-500'>{project.Description}</p>
-
-            {/* Link to the project */}
-            <div className='mt-4'>
-              <a
-                href={project.Link}
-                target='_blank'
-                rel='noopener noreferrer'
-                className='px-6 py-2 bg-purple-600 text-white font-semibold rounded-lg shadow-md transform hover:scale-105 transition-all duration-300'
-              >
-                View Project
-              </a>
+              {project.Link && (
+                <a
+                  href={project.Link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-500 text-white rounded-md text-sm font-semibold"
+                >
+                  View Project 🚀
+                </a>
+              )}
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

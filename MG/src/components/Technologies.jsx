@@ -1,72 +1,68 @@
-import React from 'react';
-import { RiReactjsLine } from 'react-icons/ri';
-import { TbBrandNextjs } from 'react-icons/tb';
-import { SiTailwindcss } from 'react-icons/si';
-import { SiFirebase } from 'react-icons/si';
-import { FaBlender, FaGoogle, FaNodeJs, FaUnity } from 'react-icons/fa';
-import { SiMongodb } from 'react-icons/si';
-import { FaAndroid } from 'react-icons/fa';
-import { FaCloud } from 'react-icons/fa';
-import { FaDocker } from 'react-icons/fa';
-import { FaAws } from 'react-icons/fa';
-import { FaMicrosoft } from 'react-icons/fa';
-import { FaDatabase } from 'react-icons/fa';
-import { FaAngular } from 'react-icons/fa';
+import React from "react";
+import { motion } from "framer-motion";
+import { 
+  RiReactjsLine, 
+  TbBrandNextjs, 
+  SiTailwindcss, 
+  SiFirebase, 
+  SiMongodb 
+} from "react-icons/si";
+import { 
+  FaBlender, FaGoogle, FaNodeJs, FaUnity, FaAndroid,
+  FaCloud, FaDocker, FaAws, FaMicrosoft, FaDatabase, FaAngular
+} from "react-icons/fa";
+
+const techStack = [
+  { icon: <RiReactjsLine />, name: "React", color: "text-cyan-400", hover: "hover:shadow-cyan-500/50" },
+  { icon: <TbBrandNextjs />, name: "Next.js", color: "text-white", hover: "hover:shadow-gray-300/50" },
+  { icon: <FaAndroid />, name: "Android", color: "text-green-400", hover: "hover:shadow-green-500/50" },
+  { icon: <FaUnity />, name: "Unity", color: "text-gray-300", hover: "hover:shadow-gray-400/50" },
+  { icon: <FaGoogle />, name: "Google Cloud", color: "text-yellow-400", hover: "hover:shadow-yellow-500/50" },
+  { icon: <SiFirebase />, name: "Firebase", color: "text-orange-400", hover: "hover:shadow-orange-500/50" },
+  { icon: <FaNodeJs />, name: "Node.js", color: "text-green-500", hover: "hover:shadow-green-600/50" },
+  { icon: <FaAws />, name: "AWS", color: "text-yellow-500", hover: "hover:shadow-yellow-600/50" },
+  { icon: <FaCloud />, name: "Cloud", color: "text-blue-300", hover: "hover:shadow-blue-400/50" },
+  { icon: <FaDocker />, name: "Docker", color: "text-blue-500", hover: "hover:shadow-blue-600/50" },
+  { icon: <FaMicrosoft />, name: "Microsoft", color: "text-blue-600", hover: "hover:shadow-blue-700/50" },
+  { icon: <FaDatabase />, name: "Databases", color: "text-indigo-400", hover: "hover:shadow-indigo-500/50" },
+  { icon: <FaAngular />, name: "Angular", color: "text-red-500", hover: "hover:shadow-red-600/50" },
+  { icon: <SiTailwindcss />, name: "TailwindCSS", color: "text-teal-400", hover: "hover:shadow-teal-500/50" },
+  { icon: <SiMongodb />, name: "MongoDB", color: "text-green-500", hover: "hover:shadow-green-600/50" },
+  { icon: <FaBlender />, name: "Blender", color: "text-orange-500", hover: "hover:shadow-orange-600/50" },
+];
 
 const Technologies = () => {
   return (
-    <div className="border-b border-neutral-800 pb-24">
-              <h1 className="my-20 text-center text-6xl font-bold text-purple-600">Technologies</h1>
+    <section className="border-b border-neutral-800 pb-24">
+      <motion.h1
+        className="my-20 text-center text-5xl md:text-6xl font-extrabold text-purple-500"
+        initial={{ opacity: 0, y: -40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+      >
+        Technologies
+      </motion.h1>
 
-      
-      <div className="flex flex-wrap justify-center gap-8 sm:gap-6 md:gap-8 lg:gap-10">
-        <div className="group p-4 rounded-2xl border-4 border-neutral-800 hover:bg-purple-600 transition-all duration-300 hover:shadow-xl">
-          <RiReactjsLine className="text-6xl text-cyan-500 group-hover:text-white" />
-        </div>
-        <div className="group p-4 rounded-2xl border-4 border-neutral-800 hover:bg-black transition-all duration-300 hover:shadow-xl">
-          <TbBrandNextjs className="text-6xl text-white group-hover:text-green-500" />
-        </div>
-        <div className="group p-4 rounded-2xl border-4 border-neutral-800 hover:bg-green-600 transition-all duration-300 hover:shadow-xl">
-          <FaAndroid className="text-6xl text-green-200 group-hover:text-white" />
-        </div>
-        <div className="group p-4 rounded-2xl border-4 border-neutral-800 hover:bg-purple-700 transition-all duration-300 hover:shadow-xl">
-          <FaUnity className="text-6xl text-gray-400 group-hover:text-white" />
-        </div>
-        <div className="group p-4 rounded-2xl border-4 border-neutral-800 hover:bg-yellow-500 transition-all duration-300 hover:shadow-xl">
-          <FaGoogle className="text-6xl text-orange-400 group-hover:text-white" />
-        </div>
-        <div className="group p-4 rounded-2xl border-4 border-neutral-800 hover:bg-green-500 transition-all duration-300 hover:shadow-xl">
-          <SiFirebase className="text-6xl text-green-500 group-hover:text-white" />
-        </div>
-        <div className="group p-4 rounded-2xl border-4 border-neutral-800 hover:bg-green-700 transition-all duration-300 hover:shadow-xl">
-          <FaNodeJs className="text-6xl text-green-600 group-hover:text-white" />
-        </div>
-        <div className="group p-4 rounded-2xl border-4 border-neutral-800 hover:bg-yellow-600 transition-all duration-300 hover:shadow-xl">
-          <FaAws className="text-6xl text-orange-500 group-hover:text-white" />
-        </div>
-        <div className="group p-4 rounded-2xl border-4 border-neutral-800 hover:bg-blue-600 transition-all duration-300 hover:shadow-xl">
-          <FaCloud className="text-6xl text-white group-hover:text-white" />
-        </div>
-        <div className="group p-4 rounded-2xl border-4 border-neutral-800 hover:bg-purple-800 transition-all duration-300 hover:shadow-xl">
-          <FaDocker className="text-6xl text-blue-600 group-hover:text-white" />
-        </div>
-        <div className="group p-4 rounded-2xl border-4 border-neutral-800 hover:bg-blue-800 transition-all duration-300 hover:shadow-xl">
-          <FaMicrosoft className="text-6xl text-blue-600 group-hover:text-white" />
-        </div>
-        <div className="group p-4 rounded-2xl border-4 border-neutral-800 hover:bg-indigo-600 transition-all duration-300 hover:shadow-xl">
-          <FaDatabase className="text-6xl text-indigo-600 group-hover:text-white" />
-        </div>
-        <div className="group p-4 rounded-2xl border-4 border-neutral-800 hover:bg-red-600 transition-all duration-300 hover:shadow-xl">
-          <FaAngular className="text-6xl text-red-600 group-hover:text-white" />
-        </div>
-        <div className="group p-4 rounded-2xl border-4 border-neutral-800 hover:bg-teal-500 transition-all duration-300 hover:shadow-xl">
-          <SiTailwindcss className="text-6xl text-teal-500 group-hover:text-white" />
-        </div>
-        <div className="group p-4 rounded-2xl border-4 border-neutral-800 hover:bg-green-600 transition-all duration-300 hover:shadow-xl">
-          <SiMongodb className="text-6xl text-green-500 group-hover:text-white" />
-        </div>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-10 px-6 md:px-20">
+        {techStack.map((tech, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            whileHover={{ scale: 1.15, rotate: 3 }}
+            transition={{ duration: 0.4 }}
+            className={`group flex flex-col items-center justify-center p-6 rounded-2xl bg-white/5 border border-neutral-700 shadow-md backdrop-blur-md hover:shadow-2xl ${tech.hover} transition-all`}
+          >
+            <div className={`text-6xl ${tech.color} group-hover:animate-bounce`}>
+              {tech.icon}
+            </div>
+            <p className="mt-3 text-sm font-semibold text-gray-300 group-hover:text-white">
+              {tech.name}
+            </p>
+          </motion.div>
+        ))}
       </div>
-    </div>
+    </section>
   );
 };
 

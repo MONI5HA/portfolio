@@ -15,7 +15,19 @@ export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer w
 
 export const experience = [
   {
-    year: "2024 - 2024",
+    year: "2025 - Present",
+    role: "Software Developer",
+    company: "Ontario Lottery and Gaming, Toronto, Ontario,Canada",
+    description:
+"Currently working on developing an internal web application using React.js for the frontend and Python (FastAPI) for the backend.Responsible for designing, building, and maintaining scalable features while integrating CI/CD pipelines and database systems.",
+    technologies: [
+      "React.js", "Python", "FastAPI", "CI/CD Pipelines", "SSIS", "SSM", "SQL Server", "Sybase", "TeamCity", "Octopus Deploy", "Jira", "Confluence",
+      "Azure DevOps",
+      "Docker",
+    ],
+  },
+  {
+    year: "2023 - 2024",
     role: "Software Developer",
     company: "Heptre Techworks (Startup), Remote",
     description:
